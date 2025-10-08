@@ -1,5 +1,5 @@
 // Zellij layout for Helix IDE
-// VS Code-style layout with editor on top, tabbed pane on bottom
+// VS Code-style layout with editor on top, terminal pane on bottom
 
 layout {
     default_tab_template {
@@ -14,17 +14,11 @@ layout {
     
     tab name="helix" focus=true {
         pane split_direction="vertical" {
-            // Top pane: Helix editor
-            pane name="editor" focus=true {
-                command "hx"
-            }
+            // Top pane: Helix editor (70% height)
+            pane size="70%" focus=true
             
-            // Bottom pane: Tabbed terminal area (VS Code style)
-            pane split_direction="horizontal" size="30%" {
-                pane name="terminal" focus=false {
-                    // Default terminal tab
-                }
-            }
+            // Bottom pane: Terminal (30% height)
+            pane size="30%"
         }
     }
 }

@@ -1,0 +1,140 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    
+    // Main terminal - always ready
+    tab name="terminal" focus=true
+    
+    // File explorer
+    tab name="files" {
+        pane command="yazi" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Search in files
+    tab name="search" {
+        pane command="scooter" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Find files
+    tab name="find" {
+        pane command="fzf" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Git TUI
+    tab name="git" {
+        pane command="lazygit" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // GitHub dashboard
+    tab name="github" {
+        pane command="gh" {
+            args "dash"
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // GitHub Actions
+    tab name="actions" {
+        pane command="lazyactions" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Workflows
+    tab name="workflows" {
+        pane command="wrkflw" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // HTTP client
+    tab name="http" {
+        pane command="posting" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Database
+    tab name="sql" {
+        pane command="lazysql" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Docker
+    tab name="docker" {
+        pane command="lazydocker" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // System monitor
+    tab name="system" {
+        pane command="btm" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // Todo list
+    tab name="todos" {
+        pane command="todotui" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    // AI assistants
+    tab name="claude" {
+        pane command="claude" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    tab name="claudette" {
+        pane command="claudette" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    tab name="gemini" {
+        pane command="gemini" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+    
+    tab name="amazon q" {
+        pane command="q" {
+            start_suspended true
+            close_on_exit true
+        }
+    }
+}
